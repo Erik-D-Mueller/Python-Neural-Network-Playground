@@ -9,11 +9,9 @@ def sigmoid(x):
 
     # training input data
 
-training_input_data = np.array([0,1,0],
-                               [1,1,1],
-                               [1,0,1],
-                               [0,1,0],
-                                [1,1,0]
+training_input_data = np.array([[0,1,0],[1,1,1],[1,0,1],[0,1,0]])
+
+
 training_output_data = np.array([[0,1,1,0]]).T
 
 np.random.seed(1)
@@ -35,4 +33,3 @@ for iteration in range(1):
 
     print('Outputs after training')
     print(outputs)
-    
