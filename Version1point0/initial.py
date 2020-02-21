@@ -1,7 +1,6 @@
 # 02-12-2020
 # following along to a video showing how to implement simple neural network
 
-
 import numpy as np
 
 def sigmoid(x):
@@ -13,8 +12,8 @@ def sigmoid(x):
 training_input_data = np.array([0,1,0],
                                [1,1,1],
                                [1,0,1],
-                               [0,1,0])
-
+                               [0,1,0],
+                                [1,1,0]
 training_output_data = np.array([[0,1,1,0]]).T
 
 np.random.seed(1)
@@ -36,3 +35,4 @@ for iteration in range(1):
 
     print('Outputs after training')
     print(outputs)
+    
