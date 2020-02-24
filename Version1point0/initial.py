@@ -15,23 +15,23 @@ def sigmoid_derivative(x):
     return x * (1 - x)
 
 # training input data
-
 training_input_data = np.array([
     [0,1,0],
     [1,1,1],
     [1,0,1],
     [0,1,0]])
 
-training_output_data = np.array([[0,1,1,0]]).T
+training_output_data = np.array([[0, 1, 1, 0]]).T
 
-synaptic_weights = 2 * np.random.random((3,1)) - 1
+#creates a 1x3 matrix with values between -1 and 1
+synaptic_weights = 2 * np.random.random((3, 1)) - 1
 
 print('Initial Random starting synaptic weights: ')
 print(synaptic_weights)
 
 input_layer = training_input_data
 
-for iteration in range(20):
+for iteration in range(2000):
 
     outputs = sigmoid(np.dot(training_input_data,synaptic_weights))
 
