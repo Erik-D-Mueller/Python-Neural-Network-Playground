@@ -26,12 +26,14 @@ training_output_data = np.array([[0, 1, 1, 0]]).T
 #creates a 1x3 matrix with values between -1 and 1
 synaptic_weights = 2 * np.random.random((3, 1)) - 1
 
+
+print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
 print('Initial Random starting synaptic weights: ')
 print(synaptic_weights)
 
 input_layer = training_input_data
 
-for iteration in range(2000):
+for iteration in range(200):
 
     outputs = sigmoid(np.dot(training_input_data,synaptic_weights))
 
@@ -44,7 +46,7 @@ for iteration in range(2000):
     print('Synaptic weights after training')
     print(synaptic_weights)
 
-print('Synaptic weights after training')
+print('Final Synaptic Weights')
 print(synaptic_weights)
 
 print('Outputs after training')
